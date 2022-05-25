@@ -1,0 +1,5 @@
+server:
+  port: 8080
+google:
+  apiKey: AIzaSyCAPKjw4U8MgkXrcXh1xEuogF3TQopKyac
+  translateURL: https://translation.googleapis.com/language/translate/v2
