@@ -11,14 +11,13 @@ public class AgribotApplication {
 	}
 
 	//TODO
-	//a) Rive scripts
+	//a) Rive scripts -- done
 	//b) Train the model
-	//c) NLP
+	//c) NLP model -- done
 	//d) Websocket
 	//e) Language conversion -- done
 
-	//f) Front End ( Android ? & Website ?)
-	//g) Param ?
+	//f) Front End ( Android ? & Website ?) - Param
 
 	//h) Twilio integration
 	//i) Audio integration

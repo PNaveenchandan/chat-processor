@@ -1,5 +1,48 @@
 server:
   port: 8080
+spring:
+  datasource:
+    password: XDBSuL0FVIDKEeB4qiF2pSTqWmR4bDaE
+    url: jdbc:postgresql://tyke.db.elephantsql.com:5432/stlhxafl
+    username: stlhxafl
+    hikari:
+      maximumPoolSize: 2
+      minimumIdle: 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    enabled-by-default: true
+    enabled: true
+    configprops:
+      enabled: true
+    beans:
+      enabled: true
+#logging:
+#  file: /temp/application.log
 google:
   apiKey: AIzaSyCAPKjw4U8MgkXrcXh1xEuogF3TQopKyac
   translateURL: https://translation.googleapis.com/language/translate/v2
+rivescript:
+  enabled: true # Enable RiveScript for the application.
+  source-path: classpath:/riveScript/ # The comma-separated list of RiveScript source files and/or directories.
+  file-extensions: .rive, .rs # The comma-separated list of RiveScript file extensions to load.
+  throw-exceptions: false # Enable throw exceptions.
+  strict: true # Enable strict syntax checking.
+  utf8: false # Enable UTF-8 mode.
+  #unicode-punctuation: [.,!?;:] # The unicode punctuation pattern (only used when UTF-8 mode is enabled).
+  force-case: false # Enable forcing triggers to lowercase.
+  concat: none # The concat mode (none|newline|space).
+  depth: 50 # The recursion depth limit.
+  error-messages: This is error # The custom error message overrides. For instance `rivescript.error-messages.deepRecursion=Custom Deep Recursion Detected Message`
+  object-handlers: javascript # The comma-separated list of object handler names to register (currently supported: `groovy`, `javascript`, `ruby`).
+

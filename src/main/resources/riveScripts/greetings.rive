@@ -1,0 +1,254 @@
++ (hi|hii|hello|greeting|greetings|hey)
+- greetings:hi
+- greetings:hello
+- greetings:greeting
+- greetings:greetings
+- greetings:hey
+- greetings:hi-agribot
+- greetings:hii-agribot
+- greetings:hii
+
++ (hi|hii|hello|hey|greeting|greetins) [*] (pai|sis|sister|baby|jaan|team|mam|maam|irctc|there|today|cuty|betaji|mami|mam|dear|how are you|how r u|how you|h r u|hru|how are u|good evening|madam|darling|disa|mem|dishu|ji|kaisi ho|sir|mama)
+- greetings:hi
+- greetings:hello
+- greetings:greeting
+- greetings:greetings
+- greetings:hey
+- greetings:hi-agribot
+- greetings:hii-agribot
+- greetings:hii
+
++ (how are you|are you ok|you ok|are you okay|you okay|how are you pai|how are you doing)
+- greetings:how-are-you
+- greetings:are-you-ok
+- greetings:you-ok
+
++ (are you a real person) [*]
+- greetings:are-you-a-real-person
+
++ (what is your gender|are you male|are you female|are you gay|what is your sex)
+- greetings:what-is-your-gender
+- greetings:are-you-male
+- greetings:are-you-female
+- greetings:are-you-gay
+- greetings:what-is-your-sex
+
++ [*] (age|how old you are|how old are you) [*]
+- greetings:age
+- greetings:how-old-you-are
+- greetings:how-old-are-you
+
++ (who are you|your name|what is your name|are you pai or agribot|are you agribot or pai)
+- greetings:who-are-you
+- greetings:your-name
+- greetings:what-is-your-name
+- greetings:are-you-isha-or-agribot
+- greetings:are-you-agribot-or-isha
+
++ (who is pai|what is pai|pai|need help)
+- greetings:who-is-agribot
+- greetings:what-is-agribot
+- greetings:agribot
+- greetings:need-help
+
++ (whats up|whatsup)
+- greetings:whats-up
+- greetings:whatsup
+
++ (who is isha|what is isha|isha)
+- greetings:who-is-agribot
+- greetings:what-is-agribot
+- greetings:agribot
+
++ (define yourself|what are you|introduce yourself|tell me about yourself|talk about yourself)
+- greetings:define-yourself
+- greetings:what-are-you
+- greetings:introduce-yourself
+- greetings:tell-me-about-yourself
+- greetings:talk-about-yourself
+
++ (you are annoying|you are really annoying|you are irritating|you annoy me|i find you annoying|annoying)
+- greetings:you-are-annoying
+- greetings:you-are-really-annoying
+- greetings:you-are-irritating
+- greetings:you-annoy-me
+- greetings:i-find-you-annoying
+- greetings:annoying
+
++ (answer|answer me|answer my question|tell me the answer)
+- greetings:answer
+- greetings:answer-me
+- greetings:answer-my-question
+- greetings:tell-me-the-answer
+
++ (i have a question|can you answer)
+- greetings:i-have-a-question
+- greetings:can-you-answer
+
++ (you are not helping me|you are bad|you are useless|you are horrible|you are very bad|you are not good|you are bad|you are terrible|you are the worst|be smarter|bad|useless|horrible|not good)
+- greetings:you-are-not-helping-me
+- greetings:you-are-bad
+- greetings:you-are-useless
+- greetings:you-are-horrible
+- greetings:you-are-very-bad
+- greetings:you-are-not-good
+- greetings:you-are-bad
+- greetings:you-are-terrible
+- greetings:you-are-the-worst
+- greetings:be-smarter
+- greetings:bad
+- greetings:useless
+- greetings:horrible
+- greetings:not-good
+
++ [*] (attractive|amazing|beautiful|looking good today|very good|awesome|cute|handsome|intelligent|genius|so nice of you|lovely|super) [*]
+- greetings:attractive
+- greetings:amazing
+- greetings:beautiful
+- greetings:looking-good-today
+- greetings:very-good
+- greetings:awesome
+- greetings:cute
+- greetings:handsome
+- greetings:intelligent
+- greetings:genius
+- greetings:so-nice-of-you
+- greetings:lovely
+- greetings:super
+
++ (who is your boss|who is your master|who do you work for)
+- greetings:who-is-your-boss
+- greetings:who-is-your-master
+- greetings:who-do-you-work-for
+
++ [*] (are you busy|busy|do you have time) [*]
+- greetings:are-you-busy
+- greetings:busy
+- greetings:do-you-have-time
+
++ [*] (are you bot|are you human|are you chatbot|are you robot|robot|bot) [*]
+- greetings:are-you-bot
+- greetings:are-you-human
+- greetings:are-you-chatbot
+- greetings:are-you-robot
+- greetings:robot
+- greetings:bot
+
++ [*] (nut|crazy|mad|insane) [*]
+- greetings:nut
+- greetings:crazy
+- greetings:mad
+- greetings:insane
+
++ [*] (hungry|eat)
+- greetings:hungry
+- greetings:eat
+
++ [*] (marry|wife|married) [*]
+- greetings:marry
+- greetings:wife
+- greetings:married
+
++ (friends|friend)
+- greetings:friends
+- greetings:friend
+
++ (ok|sure|okay|alright|okie|k|of course|great|yes|yeah|yeah sure)
+- greetings:ok
+- greetings:sure
+- greetings:okay
+- greetings:alright
+- greetings:okie
+- greetings:k
+- greetings:of course
+- greetings:great
+- greetings:yes
+- greetings:yeah
+- greetings:yeah sure
+
++ (do you want to chat with me|talk to me|can you talk with me|talk|say|chat with me)
+- greetings:do-you-want-to-chat-with-me
+- greetings:talk-to-me
+- greetings:can-you-talk-with-me
+- greetings:talk
+- greetings:say
+- greetings:chat-with-me
+
++ (you there|are you there|you are there|still there)
+- greetings:you-there
+- greetings:are-you-there
+- greetings:you-are-there
+- greetings:still-there
+
++ [*] (no problem|do not worry)
+- greetings:no-problem
+- greetings:do-not-worry
+
++ [*] (thank|thanks|thanx|thnx|thankyou|thanku|thank you) [*]
+- greetings:thank
+- greetings:thanks
+- greetings:thanx
+- greetings:thnx
+- greetings:thankyou
+- greetings:thanku
+- greetings:thank-you
+
++ (wrong|incorrect)
+- greetings:wrong
+- greetings:incorrect
+
++ (ha ha|lol|he he|funny|lmao)
+- greetings:ha-ha
+- greetings:lol
+- greetings:he-he
+- greetings:funny
+- greetings:lmao
+
++ [*] (okay see you later|see you later|bye|goodbye|see you|see you soon|leave me alone) [*]
+- greetings:okay-see-you-later
+- greetings:see-you-later
+- greetings:bye
+- greetings:goodbye
+- greetings:see-you
+- greetings:see-you-soon
+- greetings:leave-me-alone
+
++ [*] (good morning|good morning|gud morning|gm|g m) [*]
+- greetings:good-morning
+- greetings:good-morning
+- greetings:gud-morning
+
++ [*] good night [*]
+- greetings:good-night
+- greetings:good-night
+
++ [*] good afternoon [*]
+- greetings:good-afternoon
+
++ (are you real|you are real|i do not think you are fake|you are so real)
+- greetings:are-you-real
+- greetings:you-are-real
+- greetings:i-do-not-think-you-are-fake
+- greetings:you-are-so-real
+
++ [*] (sorry|excuse|pardon) [*]
+- greetings:sorry
+- greetings:excuse
+- greetings:pardon
+
++ (i am back|i came back|here i am again)
+- greetings:i-am-back
+- greetings:i-came-back
+- greetings:here-i-am-again
+
++ (test|testing|i am testing)
+- greetings:test
+- greetings:testing
+- greetings:i am testing
+
++ [*] (love|like) [*]
+- greetings:love
+- greetings:like
+
++ [*] joke [*]
+- greetings:joke

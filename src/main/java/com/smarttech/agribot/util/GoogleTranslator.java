@@ -2,8 +2,9 @@ package com.smarttech.agribot.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.smarttech.agribot.config.GoogleConfig;
-import com.smarttech.agribot.dto.ChatRequest;
 import com.smarttech.agribot.dto.GoogleTranslateRequest;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
@@ -22,10 +23,10 @@ import java.util.*;
 @Component
 public class GoogleTranslator {
 
-	public static String translateToEnglish(GoogleConfig config, ChatRequest request) throws JsonProcessingException {
+	public static String translate(GoogleConfig config, String text, String target) throws JsonProcessingException {
 		GoogleTranslateRequest googleTranslateRequestDTO = new GoogleTranslateRequest();
-		googleTranslateRequestDTO.setQ(Arrays.asList(request.getQuestion()));
-		googleTranslateRequestDTO.setTarget("en");
+		googleTranslateRequestDTO.setQ(Arrays.asList(text));
+		googleTranslateRequestDTO.setTarget(target);
 
 		ObjectMapper mapper = new ObjectMapper();
 		RestTemplate restTemplate = new RestTemplate();
@@ -43,7 +44,9 @@ public class GoogleTranslator {
 		URI parameterizedUri = getParameterizedUri(queryParams, config.getTranslateURL());
 		ResponseEntity<String> responseEntity = restTemplate.exchange(parameterizedUri, HttpMethod.POST, httpEntity,
 			String.class);
-		return responseEntity.getBody();
+		JsonObject response =  new JsonParser().parse(responseEntity.getBody()).getAsJsonObject();
+		System.out.println(response);
+		return response.get("data").getAsJsonObject().get("translations").getAsJsonArray().get(0).getAsJsonObject().get("translatedText").getAsString();
 	}
 
 
