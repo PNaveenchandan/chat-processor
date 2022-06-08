@@ -1,5 +1,6 @@
 package com.smarttech.agribot.service;
 
+import com.smarttech.agribot.dto.ChatResponse;
 import com.smarttech.agribot.nlp.IntentTrainer;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -32,15 +33,15 @@ public class ChatProcessorService {
     resolvers.add(nlpAnswerResolver);
   }
 
-  public String answer(String question){
+  public ChatResponse answer(String question){
     log.info(String.format("there are %d resolvers ", resolvers.size()));
     for (AnswerResolver resolver : resolvers) {
-      String reply = resolver.getAnswer(question);
-      if(isValidReply(reply)){
-        return reply;
+      ChatResponse response = resolver.getAnswer(question);
+      if(isValidReply(response.getAnswer())){
+        return response;
       }
     }
-    return "ERR";
+    return new ChatResponse("ERR",false, null);
   }
 
   private boolean isValidReply(String reply) {

@@ -1,5 +1,7 @@
 package com.smarttech.agribot.service;
 
+import com.smarttech.agribot.dto.ChatResponse;
+
 public interface AnswerResolver {
-  public String getAnswer(String question);
+  public ChatResponse getAnswer(String question);
 }

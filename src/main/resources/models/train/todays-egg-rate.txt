@@ -1,5 +1,4 @@
+what is <START:item> todays <END> <START:item> egg price <END> in <START:item> bangalore <END>
+what is <START:item> today's <END> <START:item> egg rate <END> in <START:item> bangalore <END>
 <START:item> today's <END> <START:item> egg rate <END> in <START:item> bangalore <END>
 <START:item> todays <END> <START:item> egg price <END> in <START:item> bangalore <END>
-what is <START:item> todays <END> <START:item> egg price <END> in <START:item> bangalore <END>
-what is the <START:item> egg price <END> <START:item> today <END>
-<START:item> egg price <END>  <START:item> today <END>

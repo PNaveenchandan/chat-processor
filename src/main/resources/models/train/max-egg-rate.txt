@@ -1,0 +1,7 @@
+where will I get <START:item> maximum price <END> for <START:item> eggs <END> today
+where can I get <START:item> max egg rate <END> today
+where will I get <START:item> max egg price <END> today
+which city offers <START:item> maximum price for eggs <END> today
+which city gives <START:item> more price for eggs <END> today
+where I get <START:item> maximum price for eggs <END> today
+In which city would I get <START:item> more price for eggs <END> today

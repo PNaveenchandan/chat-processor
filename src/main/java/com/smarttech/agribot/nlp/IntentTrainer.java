@@ -12,6 +12,7 @@ import opennlp.tools.tokenize.TokenizerModel;
 import opennlp.tools.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
@@ -25,6 +26,9 @@ import java.util.List;
 
 @Service
 public class IntentTrainer {
+
+  @Value("${spring.profiles.active}")
+  private String profile;
 
   private static DocumentCategorizerME categorizer;
 
@@ -44,11 +48,15 @@ public class IntentTrainer {
   public void trainModels() throws Exception {
 
     try {
+      File trainingDirectory = null;
       //Path path = Path.of(this.getClass().getResource("/tmp/models/train").toURI());
       //URL resource = getClass().getClassLoader().getResource("/models/train");
       //URL resource2 = getClass().getResource("todays-egg-rate.txt");
-
-      File trainingDirectory = ResourceUtils.getFile("/tmp/models/train").getAbsoluteFile();
+      if(profile.equals("dev")) {
+         trainingDirectory = new File("/Users/jayachandranputtalin/Desktop/agribotAssets/models/train");
+      }else{
+         trainingDirectory = ResourceUtils.getFile("/tmp/models/train").getAbsoluteFile();
+      }
       //File trainingDirectory = Path.of(this.getClass().getResource("/tmp/models/train").toURI()).toFile();
       //File trainingDirectory = new File("/Users/jayachandranputtalin/Desktop/agribotAssets/models/train");
       //File trainingDirectory = path.toFile();
@@ -111,12 +119,15 @@ public class IntentTrainer {
     InfoDto result = new InfoDto();
 
     try {
-     // File trainingDirectory = Path.of(this.getClass().getResource("/tmp/models/en-token.bin").toURI()).toFile();
-      //InputStream modelIn = new FileInputStream(trainingDirectory);
+      InputStream modelIn = null;
+      if(profile.equals("dev")) {
+         modelIn = new FileInputStream("/Users/jayachandranputtalin/Desktop/agribotAssets/models/en-token.bin");
+      }else{
+        File file = ResourceUtils.getFile("/tmp/models/en-token.bin");
+         modelIn = new FileInputStream(file);
+      }
      // Path path = Path.of(this.getClass().getResource("/models/train").toURI());
       //InputStream modelIn = getClass().getClassLoader().getResourceAsStream("/tmp/models/en-token.bin");
-      File file = ResourceUtils.getFile("/tmp/models/en-token.bin");
-      InputStream modelIn = new FileInputStream(file);
       TokenizerModel model = new TokenizerModel(modelIn);
       Tokenizer tokenizer = new TokenizerME(model);
       String[] tokens = tokenizer.tokenize(input.toLowerCase());
@@ -146,9 +157,11 @@ public class IntentTrainer {
   }
 
   public static void main(String[] args) throws Exception {
+
     IntentTrainer trainer = new IntentTrainer();
+    trainer.profile = "dev";
     trainer.trainModels();
-    List<String> asList = Arrays.asList("my country is india nation");
+    List<String> asList = Arrays.asList("todays egg rate in bangalore");
     for (String input : asList) {
       System.out.println("===============================");
       System.out.println(input);

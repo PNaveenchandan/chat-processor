@@ -1,6 +1,8 @@
 server:
   port: 8080
 spring:
+  profiles:
+    active: prod
   datasource:
     password: XDBSuL0FVIDKEeB4qiF2pSTqWmR4bDaE
     url: jdbc:postgresql://tyke.db.elephantsql.com:5432/stlhxafl

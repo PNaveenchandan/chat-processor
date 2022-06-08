@@ -39,16 +39,14 @@ public class ChatProcessorController {
      question = translate(question,"en");
     }
 
-    String answer = service.answer(question);
+    ChatResponse response = service.answer(question);
 
-    if(!ResponseUtil.isValidReply(answer)){
-      answer = "Couldn't understand your question. Please try again !";
+    if(!ResponseUtil.isValidReply(response.getAnswer())){
+      response.setAnswer( "Couldn't understand your question. Please try again !");
     }
     if(!request.getSrcLanguage().equalsIgnoreCase("en")){
-      answer = translate(answer,request.getSrcLanguage());
+      response.setAnswer(translate(response.getAnswer(),request.getSrcLanguage()));
     }
-    ChatResponse response = new ChatResponse();
-    response.setResponse(answer);
     return response;
   }
 }
