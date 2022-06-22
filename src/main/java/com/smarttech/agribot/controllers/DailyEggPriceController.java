@@ -12,7 +12,6 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 public class DailyEggPriceController {
   private DailyEggRateRepo repo;
 

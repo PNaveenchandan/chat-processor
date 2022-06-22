@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin
 public class NLPTestController {
 
   public NLPTestController(NLPAnswerResolver nlp) {
