@@ -1,4 +1,4 @@
-what is the <START:item> average <END> <START:item> egg rate <END> in <START:item> pune <END>
-<START:item> average <END> <START:item> egg price <END> in <START:item> pune <END>
-what is <START:item> average <END> <START:item> egg price <END> in <START:item> pune <END>
-<START:item> average <END><START:item> egg price <END> in <START:item> pune <END>
+what is the <START:item> average <END> <START:item> egg rate <END> in <START:item> bangalore <END>
+<START:item> average <END> <START:item> egg price <END> in <START:item> bangalore <END>
+what is <START:item> average <END> <START:item> egg price <END> in <START:item> bangalore <END>
+<START:item> average <END><START:item> egg price <END> in <START:item> bangalore <END>

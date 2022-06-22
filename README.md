@@ -17,3 +17,13 @@ sudo docker login
 usrename: jaypbevoor
 pass: docker
 sudo docker pull jaypbevoor/agribot:1
+
+# Install Nginx
+amazon-linux-extras install nginx1.12
+# enable NGinx
+sudo systemctl enable nginx
+# start nginx
+sudo systemctl start nginx
+sudo systemctl status nginx
+
+sudo vim /etc/nginx/nginx.conf

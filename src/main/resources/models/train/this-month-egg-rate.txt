@@ -1,6 +1,6 @@
-what is <START:item> this months <END> <START:item> egg rate <END> in <START:item> hyderabad <END>
-<START:item> this month <END> <START:item> egg price <END> in <START:item> hyderabad <END>
-tell me <START:item> this month's <END> <START:item> egg rate <END> in <START:item> hyderabad <END>
-<START:item> price of egg <END> in <START:item> hyderabad <END> for <START:item> last 30 days <END>
-<START:item> last 30 days <END> <START:item> egg price <END> in <START:item> hyderabad <END>
-<START:item> egg rate <END> in <START:item> hyderabad <END> for <START:item> last 30 days <END>
+what is <START:item> this months <END> <START:item> egg rate <END> in <START:item> bangalore <END>
+<START:item> this month <END> <START:item> egg price <END> in <START:item> bangalore <END>
+tell me <START:item> this month's <END> <START:item> egg rate <END> in <START:item> bangalore <END>
+<START:item> price of egg <END> in <START:item> bangalore <END> for <START:item> last 30 days <END>
+<START:item> last 30 days <END> <START:item> egg price <END> in <START:item> bangalore <END>
+<START:item> egg rate <END> in <START:item> bangalore <END> for <START:item> last 30 days <END>

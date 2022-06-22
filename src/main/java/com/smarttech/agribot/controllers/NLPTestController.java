@@ -3,12 +3,10 @@ package com.smarttech.agribot.controllers;
 import com.smarttech.agribot.dto.ChatResponse;
 import com.smarttech.agribot.service.NLPAnswerResolver;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 public class NLPTestController {
 
   public NLPTestController(NLPAnswerResolver nlp) {
